@@ -73,10 +73,10 @@ impl Network<'_> {
 }
 
 fn main() {
-    let mut l1 = FullyConnected::new(2, 3);
-    let mut l2 = Activation::new(tahh, dtanh);
-    let mut l3 = FullyConnected::new(3, 1);
-    let mut l4 = Activation::new(tahh, dtanh);
+    let mut l1 = FullyConnected::new(2, 4);
+    let mut l2 = Activation::new(tanh, dtanh);
+    let mut l3 = FullyConnected::new(4, 1);
+    let mut l4 = Activation::new(tanh, dtanh);
 
     let mut network = Network::new(vec![&mut l1, &mut l2, &mut l3, &mut l4], errors::MSE);
 
